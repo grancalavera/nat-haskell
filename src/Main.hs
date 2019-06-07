@@ -3,7 +3,12 @@ import Prelude  hiding (subtract)
 
 main :: IO ()
 main = do
-  putStrLn "hello world"
+  print zero
+  print one
+  print two
+  print three
+  print four
+  print five
 
 data Nat = Zero | Succ Nat deriving (Show, Eq)
 
