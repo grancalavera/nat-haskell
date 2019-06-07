@@ -34,3 +34,9 @@ times :: Nat -> Nat -> Nat
 times _ Zero = Zero
 times Zero _ = Zero
 times (Succ x) z@(Succ y) = Succ (y `plus` (x `times` z))
+
+instance Ord Nat where
+  compare Zero Zero = EQ
+  compare Zero _ = LT
+  compare _ Zero = GT
+  compare (Succ x) (Succ y) = compare x y
